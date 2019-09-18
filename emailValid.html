@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="fName">
+Email:<br />
+	<input type="email" name="Email" /><br />
+	password:<br />
+		<input type="password" name="password" /><br />
+	Confirm-password:<br />
+		<input type="password" name="repassword" /><br />
+
+
+		<input type="button" value="Button" onclick="myFunction()" />
+
+
+</form>
+<script>
+	function myFunction(){
+	var Email = document.fName.Email.value;
+	var passWord =  document.fName.password.value;
+	var repassWord =  document.fName.repassword.value;
+
+if(Email.indexOf("@") == -1){
+alert("Enter Correct Email")
+return;
+}	
+if(passWord ==""){
+alert("Enter Correct password")
+return;
+}
+if(passWord !==repassWord){
+alert("Enter Confirm-password")
+return;
+}
+
+	
+	
+	var myWindow=window.open("","email and password valid","height=500,width=700")
+	myWindow.document.write("<p>Email: "+Email+"</p>")
+	myWindow.document.write("<p>password: "+passWord+"</p>")
+	
+	
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
